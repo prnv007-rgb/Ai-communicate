@@ -4,16 +4,24 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from sentence_transformers import SentenceTransformer, util
 import re
 
-
 nlp = spacy.load("en_core_web_sm")
 
 class RubricScorer:
     def __init__(self):
+        # Load spaCy model with error handling
+        try:
+            self.nlp = spacy.load("en_core_web_sm")
+        except OSError:
+            print("Downloading spaCy model...")
+            import subprocess
+            subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
+            self.nlp = spacy.load("en_core_web_sm")
         
+        # Initialize heavy models once
         self.sentiment_analyzer = SentimentIntensityAnalyzer()
         self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
         
-        # Semantic targets for keyword detection
+        # Define reference sentences for semantic matching
         self.semantic_targets = {
             "Family": "I live with my family parents mother father siblings brothers sisters",
             "Hobbies": "I like to play cricket read books enjoy dancing hobbies interests free time activities sports",
@@ -25,7 +33,7 @@ class RubricScorer:
         }
 
     def analyze(self, text, duration_sec):
-        doc = nlp(text)
+        doc = self.nlp(text)
         words = [token.text for token in doc if not token.is_punct]
         word_count = len(words)
         
