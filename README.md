@@ -142,14 +142,14 @@ Hi everyone. My name is Rahul and I study in class 8th. I am 13 years old. I liv
 ### 📊 Test Case 3: Weak Introduction (Expected: ~35-45/100)
 
 ```
-Um, hi. I am, like, John. I study in 7th class. Um, I like cricket and, uh, watching TV. That's it, I guess. Thank you.
+Hey, so… Uh, yeah, so… I don’t know. I just go places, and, um, like, I don’t really have much to say. Sometimes I do stuff, I guess. Yeah. That’s, uh, it, I suppose.I am john thanks.
 ```
 
-**Duration:** 12 seconds  
+**Duration:** 15 seconds  
 **Expected Score:** ~35-45/100  
 
 **Why it scores low:**
-- ⚠️ Basic greeting only
+- ⚠️ Basic greeting at end said name
 - ❌ Missing critical keywords (age, family, school name)
 - ❌ Too brief, no proper structure
 - ❌ Multiple filler words (um, like, uh, guess)
