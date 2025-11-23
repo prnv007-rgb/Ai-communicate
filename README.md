@@ -449,7 +449,7 @@ Free ML app hosting with GPU options.
 Run on your machine for testing.
 [See DEPLOYMENT.md](DEPLOYMENT.md#local-deployment)
 
-**Live Demo:** [Coming Soon / Your Deployed Link]
+**Live Demo:** [https://ai-communicate-veaqwahkjglzrwdwccdzoy.streamlit.app/]
 
 ---
 
