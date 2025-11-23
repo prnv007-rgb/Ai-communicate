@@ -57,28 +57,28 @@ RubricScorer Processing Flow
 ```mermaid
 flowchart TD
 
-A[Start: Input Text + Duration] --> B[spaCy NLP Processing<br/>Tokenization / Sentences / Entities]
-B --> C[Word Count Extracted]
+A[Start: Input Text + Duration] --> B[spaCy NLP Processing]
+B --> C[Word Count]
 
-C --> D[1. Salutation Scoring]
+C --> D[Salutation Scoring]
 
-C --> E[2. Keyword Detection]
-E --> E1[NER Checks: Name, Age]
-E --> E2[Keyword Match: School/Class]
-E --> E3[Semantic Similarity (MiniLM)<br/>Family / Hobbies / Location / Ambition / Strengths]
+C --> E[Keyword Detection]
+E --> E1[NER: Name, Age]
+E --> E2[Keyword Match: School]
+E --> E3[Semantic Similarity: Family, Hobbies, etc.]
 
-C --> F[3. Flow Scoring<br/>Greeting → Name → Details → Closing]
+C --> F[Flow Scoring]
 
-C --> G[4. Speech Rate (WPM)]
+C --> G[Speech Rate]
 G --> G1[Compute WPM]
 
-C --> H[5. Grammar Check<br/>Sentence Caps + Punctuation]
+C --> H[Grammar Check]
 
-C --> I[6. Vocabulary Score<br/>TTR = Unique Words / Total Words]
+C --> I[Vocabulary Score]
 
-C --> J[7. Clarity<br/>Filler Word Rate]
+C --> J[Clarity: Filler Words]
 
-C --> K[8. Engagement<br/>VADER Sentiment<br/>Compound + Positive]
+C --> K[Engagement: Sentiment]
 
 D --> L[Score Aggregation]
 E1 --> L
@@ -91,10 +91,8 @@ I --> L
 J --> L
 K --> L
 
-L --> M[Final Output<br/>Overall Score + Metrics + Feedback]
+L --> M[Final Output]
 M --> N[End]
-kotlin
-Copy code
 ```
 
 
