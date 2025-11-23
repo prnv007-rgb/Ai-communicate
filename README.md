@@ -14,6 +14,7 @@
 ## 📋 Table of Contents
 - [Overview](#-overview)
 - [Features](#-features)
+- [Workflow](#-Workflow)
 - [Demo Transcripts](#-demo-transcripts)
 - [Scoring Rubric](#-scoring-rubric)
 - [Installation](#-installation)
@@ -50,6 +51,49 @@ The tool provides **detailed per-criterion feedback** to help students improve t
 ✅ **Fully Documented** scoring formulas and methodology  
 
 ---
+## Workflow 
+RubricScorer Processing Flow
+
+```mermaid
+flowchart TD
+
+A[Start: Input Text + Duration] --> B[spaCy NLP Processing<br/>• Tokenization<br/>• Sentences<br/>• Entities]
+B --> C[Word Count Extracted]
+
+C --> D[1. Salutation Scoring]
+C --> E[2. Keyword Detection]
+
+E --> E1[NER Checks<br/>• Name<br/>• Age]
+E --> E2[Keyword Matching<br/>• School/Class]
+E --> E3[Semantic Similarity<br/>SentenceTransformer<br/>• Family<br/>• Hobbies<br/>• Location<br/>• Ambition<br/>• Strengths]
+
+C --> F[3. Flow Scoring<br/>Order: Greeting → Name → Details → Closing]
+
+C --> G[4. Speech Rate (WPM)]
+G --> G1[WPM = words/min]
+
+C --> H[5. Grammar Check<br/>Caps + Punctuation]
+
+C --> I[6. Vocabulary Score<br/>TTR = unique/total words]
+
+C --> J[7. Clarity<br/>Filler Word Rate]
+
+C --> K[8. Engagement<br/>VADER Sentiment<br/>Compound + Positive]
+
+D --> L[Score Aggregation]
+E --> L
+F --> L
+G1 --> L
+H --> L
+I --> L
+J --> L
+K --> L
+
+L --> M[Final Output<br/>• Overall Score<br/>• All Metric Scores<br/>• Feedback<br/>• WPM / TTR / Sentiment]
+M --> N[End]
+css
+Copy code
+
 
 ## 🎥 Demo Transcripts & Expected Scores
 
