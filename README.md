@@ -14,7 +14,7 @@
 ## 📋 Table of Contents
 - [Overview](#-overview)
 - [Features](#-features)
-- [Workflow](#-Workflow)
+- [Workflow](#-workflow)
 - [Demo Transcripts](#-demo-transcripts)
 - [Scoring Rubric](#-scoring-rubric)
 - [Installation](#-installation)
