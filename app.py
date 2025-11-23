@@ -45,7 +45,7 @@ with st.sidebar:
     """)
 
 # Main Input Section
-st.header("📝 Input Transcript")
+st.header(" Input Transcript")
 transcript = st.text_area(
     "Paste the transcript here:",
     height=250,
@@ -92,10 +92,10 @@ if analyze_button:
         st.markdown("---")
         
         # Detailed Metrics in Cards
-        st.header("📊 Detailed Breakdown")
+        st.header(" Detailed Breakdown")
         
         # Row 1: Content & Structure
-        st.subheader("🎯 Content & Structure (40 points)")
+        st.subheader(" Content & Structure (40 points)")
         col1, col2, col3 = st.columns(3)
         
         with col1:
@@ -125,7 +125,7 @@ if analyze_button:
         st.markdown("---")
         
         # Row 2: Speech Rate
-        st.subheader("⏱️ Speech Rate (10 points)")
+        st.subheader(" Speech Rate (10 points)")
         col1, col2 = st.columns(2)
         
         with col1:
@@ -145,7 +145,7 @@ if analyze_button:
         st.markdown("---")
         
         # Row 3: Language & Grammar
-        st.subheader("📚 Language & Grammar (20 points)")
+        st.subheader(" Language & Grammar (20 points)")
         col1, col2 = st.columns(2)
         
         with col1:
@@ -165,7 +165,7 @@ if analyze_button:
         st.markdown("---")
         
         # Row 4: Clarity & Engagement
-        st.subheader("✨ Clarity & Engagement (30 points)")
+        st.subheader(" Clarity & Engagement (30 points)")
         col1, col2 = st.columns(2)
         
         with col1:
@@ -185,7 +185,7 @@ if analyze_button:
         st.markdown("---")
         
         # Additional Details
-        with st.expander("🔍 View Additional Details"):
+        with st.expander(" View Additional Details"):
             col1, col2, col3 = st.columns(3)
             
             with col1:
@@ -202,7 +202,7 @@ if analyze_button:
                 st.write("**WPM:**", results['details']['wpm'])
         
         # Raw JSON Output (for debugging/verification)
-        with st.expander("📄 View Raw JSON Output"):
+        with st.expander(" View Raw JSON Output"):
             st.json(results)
         
         # Download Results
