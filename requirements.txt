@@ -3,11 +3,13 @@ pandas
 openpyxl
 
 numpy==1.26.4
-torch==2.1.0
+
+torch==2.2.1
+transformers==4.35.2
+sentence-transformers==2.2.2
+
 spacy==3.7.2
 thinc==8.2.2
-
 vaderSentiment
-sentence-transformers==2.2.2
 
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl
