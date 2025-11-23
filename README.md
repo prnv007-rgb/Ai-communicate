@@ -7,7 +7,7 @@
 
 > An AI-powered tool that analyzes and scores students' spoken communication skills based on transcript text. Built for Nirmaan AI's Communication Program Internship Case Study.
 
-**[📺 Watch Demo Video](#) | [🚀 Live Demo](https://ai-communicate-veaqwahkjglzrwdwccdzoy.streamlit.app/) 
+[ Watch Demo Video](#) | [ Live Demo](https://ai-communicate-veaqwahkjglzrwdwccdzoy.streamlit.app/) 
 
 ---
 
