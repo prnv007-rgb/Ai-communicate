@@ -4,18 +4,12 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from sentence_transformers import SentenceTransformer, util
 import re
 
-nlp = spacy.load("en_core_web_sm")
+
 
 class RubricScorer:
     def __init__(self):
-        # Load spaCy model with error handling
-        try:
-            self.nlp = spacy.load("en_core_web_sm")
-        except OSError:
-            print("Downloading spaCy model...")
-            import subprocess
-            subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
-            self.nlp = spacy.load("en_core_web_sm")
+        self.nlp = spacy.load("en_core_web_sm")
+
         
         # Initialize heavy models once
         self.sentiment_analyzer = SentimentIntensityAnalyzer()
