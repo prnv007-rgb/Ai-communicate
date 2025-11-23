@@ -501,15 +501,13 @@ Run on your machine for testing.
 ## 📁 Project Structure
 
 ```
-communication-analyzer/
+./
 ├── app.py                      # Streamlit web interface
 ├── scorer.py                   # Core scoring logic and NLP processing
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # This file
 ├── DEPLOYMENT.md              # Detailed deployment guide
 ├── .gitignore                 # Git ignore rules
-└── sample_data/
-    └── rubric.pdf             # Original rubric reference
 ```
 
 ---
@@ -606,9 +604,8 @@ MIT License - Built for Nirmaan AI Communication Program
 
 ## 👨‍💻 Author
 
-**[Your Name]**  
-📧 Email: your.email@example.com  
-🐙 GitHub: [@yourusername](https://github.com/yourusername)  
+**[Pranav R Mallia]**  
+📧 Email: pranavrmallia@gmail.com 
 📅 Submission: November 2024
 
 ---
