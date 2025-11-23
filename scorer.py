@@ -108,7 +108,7 @@ class RubricScorer:
         name_early = False
         if len(sentences) >= 2:
             first_two = " ".join(sentences[:2]).lower()
-            if "myself" in first_two or any(ent.label_ == "PERSON" for ent in nlp(first_two).ents):
+            if "myself" in first_two or any(ent.label_ == "PERSON" for ent in self.nlp(first_two).ents):
                 name_early = True
         
         if has_salutation_first and name_early and has_closing:
