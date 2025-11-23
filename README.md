@@ -57,31 +57,33 @@ RubricScorer Processing Flow
 ```mermaid
 flowchart TD
 
-A[Start: Input Text + Duration] --> B[spaCy NLP Processing<br/>• Tokenization<br/>• Sentences<br/>• Entities]
+A[Start: Input Text + Duration] --> B[spaCy NLP Processing<br/>Tokenization / Sentences / Entities]
 B --> C[Word Count Extracted]
 
 C --> D[1. Salutation Scoring]
+
 C --> E[2. Keyword Detection]
+E --> E1[NER Checks: Name, Age]
+E --> E2[Keyword Match: School/Class]
+E --> E3[Semantic Similarity (MiniLM)<br/>Family / Hobbies / Location / Ambition / Strengths]
 
-E --> E1[NER Checks<br/>• Name<br/>• Age]
-E --> E2[Keyword Matching<br/>• School/Class]
-E --> E3[Semantic Similarity<br/>SentenceTransformer<br/>• Family<br/>• Hobbies<br/>• Location<br/>• Ambition<br/>• Strengths]
-
-C --> F[3. Flow Scoring<br/>Order: Greeting → Name → Details → Closing]
+C --> F[3. Flow Scoring<br/>Greeting → Name → Details → Closing]
 
 C --> G[4. Speech Rate (WPM)]
-G --> G1[WPM = words/min]
+G --> G1[Compute WPM]
 
-C --> H[5. Grammar Check<br/>Caps + Punctuation]
+C --> H[5. Grammar Check<br/>Sentence Caps + Punctuation]
 
-C --> I[6. Vocabulary Score<br/>TTR = unique/total words]
+C --> I[6. Vocabulary Score<br/>TTR = Unique Words / Total Words]
 
 C --> J[7. Clarity<br/>Filler Word Rate]
 
 C --> K[8. Engagement<br/>VADER Sentiment<br/>Compound + Positive]
 
 D --> L[Score Aggregation]
-E --> L
+E1 --> L
+E2 --> L
+E3 --> L
 F --> L
 G1 --> L
 H --> L
@@ -89,10 +91,11 @@ I --> L
 J --> L
 K --> L
 
-L --> M[Final Output<br/>• Overall Score<br/>• All Metric Scores<br/>• Feedback<br/>• WPM / TTR / Sentiment]
+L --> M[Final Output<br/>Overall Score + Metrics + Feedback]
 M --> N[End]
-css
+kotlin
 Copy code
+```
 
 
 ## 🎥 Demo Transcripts & Expected Scores
