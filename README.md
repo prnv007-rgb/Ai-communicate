@@ -123,7 +123,7 @@ Good morning everyone! I am absolutely thrilled to introduce myself today. My na
 ### 📊 Test Case 2: Average Introduction (Expected: ~65-70/100)
 
 ```
-Hi everyone. My name is Rahul and I study in class 8th. I am 13 years old. I live with my family. I like playing football. My favorite subject is mathematics because it is interesting. Thank you.
+Hi everyone. My name is Rahul and I study in class 8th. I am 13 years old. I like playing football. My favorite subject is mathematics because it is interesting. Thank you.
 ```
 
 **Duration:** 18 seconds  
