@@ -21,7 +21,7 @@ Perfect for development, testing, and video recording.
 
 ### Prerequisites
 
-- **Python:** 3.8, 3.9, 3.10, or 3.11
+- **Python:** 3.11
 - **RAM:** Minimum 2GB, Recommended 4GB+
 - **Storage:** ~500MB for dependencies
 - **Internet:** Required for initial setup only
@@ -32,8 +32,7 @@ Perfect for development, testing, and video recording.
 
 **Option A: Using Git (Recommended)**
 ```bash
-git clone https://github.com/yourusername/communication-analyzer.git
-cd communication-analyzer
+git clone https://github.com/prnv007-rgb/Ai-communicate.git
 ```
 
 **Option B: Download ZIP**
