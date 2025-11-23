@@ -126,7 +126,7 @@ Good morning everyone! I am absolutely thrilled to introduce myself today. My na
 Hi everyone. My name is Rahul and I study in class 8th. I am 13 years old. I like playing football. My favorite subject is mathematics because it is interesting. Thank you.
 ```
 
-**Duration:** 18 seconds  
+**Duration:** 11 seconds  
 **Expected Score:** ~65-70/100  
 
 **Why it scores medium:**
