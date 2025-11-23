@@ -1,13 +1,13 @@
-# Core packages
 streamlit
 pandas
 openpyxl
-torch
-spacy
 
-# spaCy model (must use @ syntax)
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl
+numpy==1.26.4
+torch==2.1.0
+spacy==3.7.2
+thinc==8.2.2
 
-# NLP
 vaderSentiment
-sentence-transformers
+sentence-transformers==2.2.2
+
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl
